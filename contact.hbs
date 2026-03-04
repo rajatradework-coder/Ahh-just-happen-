@@ -1,0 +1,61 @@
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height:200px;">
+      <h3 class="display-4 text-white text-uppercase">{{service.title}}</h3>
+      <div class="d-inline-flex">
+        <p class="m-0 text-white"><a href="/" class="text-white">Home</a></p>
+        <p class="m-0 text-white px-2">/</p>
+        <p class="m-0 text-white"><a href="/services" class="text-white">Services</a></p>
+        <p class="m-0 text-white px-2">/</p>
+        <p class="m-0 text-white">{{service.title}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid py-5 px-sm-3 px-md-5">
+  <div class="row">
+    <!-- MAIN CONTENT -->
+    <div class="col-lg-8">
+      <img src="/images/{{service.img}}" class="img-fluid rounded mb-4 w-100" alt="{{service.title}}" style="max-height:400px; object-fit:cover;" onerror="this.style.display='none'"/>
+      <h2 class="mb-4">{{service.title}}</h2>
+      <p class="lead">{{service.desc}}</p>
+      <p>Raja Trade has been providing expert consulting services for {{service.title}} since 1995. Our dedicated team of professionals ensures smooth processing of your applications and compliance with all regulatory requirements.</p>
+      <h5 class="mt-4">How We Help You</h5>
+      <ul class="list-styled">
+        <li>Complete documentation preparation and review</li>
+        <li>Liaison with government authorities on your behalf</li>
+        <li>Tracking of application status and follow-ups</li>
+        <li>Compliance guidance and advisory</li>
+        <li>Post-approval support and renewal assistance</li>
+      </ul>
+      <div class="mt-5">
+        <a href="/contact" class="btn btn-primary py-3 px-5">Get a Quote <i class="fa fa-arrow-right ml-2"></i></a>
+      </div>
+    </div>
+    <!-- SIDEBAR -->
+    <div class="col-lg-4">
+      <div class="sidebar-widget rounded border p-4 mb-4">
+        <h5 class="mb-3">All Services</h5>
+        <ul class="list-unstyled">
+          {{#each services}}
+          <li class="mb-2">
+            <a href="/products/{{slug}}" class="sidebar-link {{#if (eq slug ../service.slug)}}active{{/if}}">
+              <i class="fa fa-angle-right mr-2"></i>{{title}}
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="sidebar-widget bg-primary rounded p-4 text-white">
+        <h5 class="text-white mb-3">Need Help?</h5>
+        <p>Contact our experts today for a free consultation.</p>
+        <p><i class="fa fa-phone mr-2"></i>02223482676</p>
+        <p><i class="fa fa-phone mr-2"></i>+91-9324093211</p>
+        <p><i class="fa fa-envelope mr-2"></i>mail@rajatrade.com</p>
+        <a href="/contact" class="btn btn-light btn-block mt-3">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</div>

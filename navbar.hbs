@@ -1,0 +1,213 @@
+<!-- CAROUSEL / HERO -->
+<div class="carousel-header">
+  <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#heroCarousel" data-slide-to="1"></li>
+      <li data-target="#heroCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-bg" style="background-image: url('/images/carousel-1.jpg');"></div>
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <div class="p-3" style="max-width:900px;">
+            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Expert Consulting</h5>
+            <h1 class="display-3 text-white mb-md-4 animated zoomIn">Export Incentives &amp; DGFT Consulting</h1>
+            <a href="/contact" class="btn btn-primary py-md-3 px-md-5 mx-2 animated slideInLeft">Get a Quote</a>
+            <a href="/about" class="btn btn-outline-light py-md-3 px-md-5 mx-2 animated slideInRight">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-bg" style="background-image: url('/images/carousel-2.jpg');"></div>
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <div class="p-3" style="max-width:900px;">
+            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Since 1995</h5>
+            <h1 class="display-3 text-white mb-md-4 animated zoomIn">25+ Years of Trade Excellence</h1>
+            <a href="/contact" class="btn btn-primary py-md-3 px-md-5 mx-2 animated slideInLeft">Get a Quote</a>
+            <a href="/services" class="btn btn-outline-light py-md-3 px-md-5 mx-2 animated slideInRight">Our Services</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-bg" style="background-image: url('/images/carousel-3.jpg');"></div>
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+          <div class="p-3" style="max-width:900px;">
+            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Custom &amp; DGFT</h5>
+            <h1 class="display-3 text-white mb-md-4 animated zoomIn">Complete Import-Export Solutions</h1>
+            <a href="/contact" class="btn btn-primary py-md-3 px-md-5 mx-2 animated slideInLeft">Get a Quote</a>
+            <a href="/services" class="btn btn-outline-light py-md-3 px-md-5 mx-2 animated slideInRight">Our Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
+
+<!-- FACTS / PILLARS -->
+<div class="container-fluid facts py-5 px-sm-3 px-md-5">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <div class="fact-item bg-primary rounded p-4 d-flex align-items-center">
+        <i class="fa fa-lightbulb fa-3x text-white mr-3"></i>
+        <div>
+          <h4 class="text-white mb-0">Innovation</h4>
+          <p class="text-white mb-0">We constantly keep innovating our processes to make them efficient and robust.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <div class="fact-item bg-dark rounded p-4 d-flex align-items-center">
+        <i class="fa fa-check-circle fa-3x text-primary mr-3"></i>
+        <div>
+          <h4 class="text-white mb-0">Consistency</h4>
+          <p class="text-white mb-0">We are consistently delivering top quality services to our customers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+      <div class="fact-item bg-primary rounded p-4 d-flex align-items-center">
+        <i class="fa fa-star fa-3x text-white mr-3"></i>
+        <div>
+          <h4 class="text-white mb-0">Excellence</h4>
+          <p class="text-white mb-0">We always strive for excellence in every aspect of our business and processes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <div class="fact-item bg-dark rounded p-4 d-flex align-items-center">
+        <i class="fa fa-globe fa-3x text-primary mr-3"></i>
+        <div>
+          <h4 class="text-white mb-0">Global Vision</h4>
+          <p class="text-white mb-0">We have a global vision to provide the best quality service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OUR SERVICES -->
+<div class="container-fluid py-5 px-sm-3 px-md-5">
+  <div class="text-center mb-5">
+    <h5 class="text-primary text-uppercase mb-3 letter-spacing">Our Services</h5>
+    <h1>What We Offer</h1>
+  </div>
+  <div class="row">
+    {{#each services}}
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="service-card">
+        <div class="service-img">
+          <img src="/images/{{img}}" alt="{{title}}" onerror="this.src='/images/default-service.jpg'"/>
+        </div>
+        <div class="service-body">
+          <h5><a href="/products/{{slug}}">{{title}}</a></h5>
+          <p>{{desc}}</p>
+          <a href="/products/{{slug}}" class="btn btn-primary btn-sm">Read More</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <div class="text-center mt-2">
+    <a href="/services" class="btn btn-primary py-3 px-5">View All Services</a>
+  </div>
+</div>
+
+<!-- WHO WE ARE -->
+<div class="container-fluid py-5 px-sm-3 px-md-5 bg-light">
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-5 mb-lg-0">
+      <h5 class="text-primary text-uppercase mb-3 letter-spacing">About Us</h5>
+      <h1 class="mb-4">Who We Are</h1>
+      <p><strong>RAJA TRADE</strong>, Mumbai, is a leading consulting firm in the area of Export Incentives and formalities, active in the marketplace since 1995. Our mission is to provide complex improvement in the level of Government incentives Schemes and consultancy on custom related matters.</p>
+      <p>Our operation team has immense knowledge and expertise in DGFT work, administering laws regarding foreign trade and foreign investment in India.</p>
+      <a href="/about" class="btn btn-primary mt-3 py-3 px-5">Read More</a>
+    </div>
+    <div class="col-lg-6">
+      <img class="img-fluid rounded" src="/images/about-us.jpg" alt="Who We Are" onerror="this.style.display='none'"/>
+    </div>
+  </div>
+</div>
+
+<!-- WHY CHOOSE US -->
+<div class="container-fluid py-5 px-sm-3 px-md-5">
+  <div class="text-center mb-5">
+    <h5 class="text-primary text-uppercase mb-3 letter-spacing">Why Choose Us</h5>
+    <h1>The Raja Trade Advantage</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="why-card d-flex align-items-start p-4 rounded border">
+        <i class="fa fa-clock fa-2x text-primary mr-4 mt-1"></i>
+        <div>
+          <h5>Minimal Time</h5>
+          <p class="mb-0">As Clearing Agents, we aim at reducing the transit time and try to give you the fastest, promptest, and most systemized delivery for all your import and export needs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="why-card d-flex align-items-start p-4 rounded border">
+        <i class="fa fa-truck fa-2x text-primary mr-4 mt-1"></i>
+        <div>
+          <h5>Logistical Support</h5>
+          <p class="mb-0">Our effective Logistical Support never disappoints with its swift transport movements, efficiency in operations and timely deliveries.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="why-card d-flex align-items-start p-4 rounded border">
+        <i class="fa fa-headset fa-2x text-primary mr-4 mt-1"></i>
+        <div>
+          <h5>Technical Support</h5>
+          <p class="mb-0">With our highly skilled and professional technical support team, you can track shipments anytime, anywhere.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="why-card d-flex align-items-start p-4 rounded border">
+        <i class="fa fa-user-tie fa-2x text-primary mr-4 mt-1"></i>
+        <div>
+          <h5>Personal Customer Care</h5>
+          <p class="mb-0">We have an eager to help friendly Personal Customer Care team dedicated to solving our queries, answering your inquiries.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="why-card d-flex align-items-start p-4 rounded border">
+        <i class="fa fa-rupee-sign fa-2x text-primary mr-4 mt-1"></i>
+        <div>
+          <h5>Lower Costs</h5>
+          <p class="mb-0">We believe in building work relationships and hence, we assure you the most competitive rates in the market and pledge to deliver.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="why-card d-flex align-items-start p-4 rounded border">
+        <i class="fa fa-book-open fa-2x text-primary mr-4 mt-1"></i>
+        <div>
+          <h5>Knowledge Centre</h5>
+          <p class="mb-0">With over 25 years of experience, our experienced and accommodating professionals offer advice and knowledge.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="container-fluid cta-banner py-5 px-sm-3 px-md-5">
+  <div class="row align-items-center">
+    <div class="col-lg-9">
+      <h3 class="text-white mb-2">Get in touch with us today to get the best quote for your requirement.</h3>
+      <p class="text-white mb-0">We can assure you of the most competitive prices.</p>
+    </div>
+    <div class="col-lg-3 text-lg-right mt-3 mt-lg-0">
+      <a href="/contact" class="btn btn-light btn-lg py-3 px-5">Get a Quote</a>
+    </div>
+  </div>
+</div>

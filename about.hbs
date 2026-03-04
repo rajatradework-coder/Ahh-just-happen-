@@ -1,0 +1,50 @@
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height:200px;">
+      <h3 class="display-4 text-white text-uppercase">Our Services</h3>
+      <div class="d-inline-flex">
+        <p class="m-0 text-white"><a href="/" class="text-white">Home</a></p>
+        <p class="m-0 text-white px-2">/</p>
+        <p class="m-0 text-white">Services</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid py-5 px-sm-3 px-md-5">
+  <div class="text-center mb-5">
+    <h5 class="text-primary text-uppercase mb-3 letter-spacing">What We Offer</h5>
+    <h1>Complete Export-Import Solutions</h1>
+    <p class="text-muted">With 25+ years of experience, we handle all DGFT and customs-related work for your business.</p>
+  </div>
+  <div class="row">
+    {{#each services}}
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="service-card h-100">
+        <div class="service-img">
+          <img src="/images/{{img}}" alt="{{title}}" onerror="this.src='/images/default-service.jpg'"/>
+        </div>
+        <div class="service-body">
+          <h5><a href="/products/{{slug}}">{{title}}</a></h5>
+          <p>{{desc}}</p>
+          <a href="/products/{{slug}}" class="btn btn-primary btn-sm">Read More <i class="fa fa-arrow-right ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="container-fluid cta-banner py-5 px-sm-3 px-md-5">
+  <div class="row align-items-center">
+    <div class="col-lg-9">
+      <h3 class="text-white mb-2">Need a specific service? Contact us today!</h3>
+      <p class="text-white mb-0">We provide customized solutions for all your import-export needs.</p>
+    </div>
+    <div class="col-lg-3 text-lg-right mt-3 mt-lg-0">
+      <a href="/contact" class="btn btn-light btn-lg py-3 px-5">Get a Quote</a>
+    </div>
+  </div>
+</div>
