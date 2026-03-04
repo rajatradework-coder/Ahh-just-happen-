@@ -1,0 +1,296 @@
+/* ============================================================
+   RAJA TRADE CLONE - Main Stylesheet
+   ============================================================ */
+
+:root {
+  --primary: #1d5ebd;
+  --dark: #1e1e2e;
+  --light: #f8f9fa;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #333;
+}
+
+a { color: var(--primary); text-decoration: none; transition: all 0.3s; }
+a:hover { color: #0d3d80; text-decoration: none; }
+
+.letter-spacing { letter-spacing: 3px; }
+
+/* ── TOP BAR ── */
+.top-bar {
+  background: var(--dark);
+  color: #aaa;
+  padding: 10px 0;
+  font-size: 13px;
+}
+.top-bar-left, .top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.top-bar .text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.top-bar .text i { color: var(--primary); }
+.top-bar .text p { margin: 0; }
+
+/* ── NAVBAR ── */
+.navbar { transition: all 0.3s; box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+.navbar-brand { padding: 0; }
+.brand-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+.navbar-brand img {
+  border-radius: 6px;
+  mix-blend-mode: multiply;
+}
+.brand-logo span { color: var(--primary); }
+.brand-logo-white { color: #fff !important; }
+.brand-logo-white span { color: #ffd700; }
+
+.navbar-nav .nav-link {
+  padding: 30px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333 !important;
+  transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active { color: var(--primary) !important; }
+
+.dropdown-menu {
+  border: 0;
+  border-top: 3px solid var(--primary);
+  border-radius: 0;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  padding: 10px 0;
+}
+.dropdown-item {
+  font-size: 13px;
+  padding: 8px 20px;
+  color: #555;
+  transition: all 0.2s;
+}
+.dropdown-item:hover {
+  color: var(--primary);
+  background: #f0f6ff;
+  padding-left: 28px;
+}
+
+.btn.btn-primary {
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.btn.btn-primary:hover {
+  background: transparent;
+  color: var(--primary) !important;
+}
+.btn.btn-outline-light:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* ── CAROUSEL / HERO ── */
+.carousel-header { position: relative; }
+.carousel-bg {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-color: #1a2a4a;
+}
+.carousel-item { position: relative; }
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,30,80,0.75) 0%, rgba(10,30,80,0.4) 100%);
+  z-index: 1;
+}
+.carousel-caption {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  text-align: center;
+}
+.carousel-caption h5 { letter-spacing: 4px; font-weight: 400; font-size: 16px; }
+.carousel-caption h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.carousel-indicators li {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  border: 0;
+}
+.carousel-indicators .active { background: var(--primary); }
+
+/* ── FACTS / PILLARS ── */
+.facts { background: #f5f7fb; }
+.fact-item { height: 100%; }
+.fact-item p { font-size: 13px; line-height: 1.5; }
+
+/* ── SERVICES ── */
+.service-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.07);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(29,94,189,0.15);
+}
+.service-img {
+  height: 220px;
+  overflow: hidden;
+  background: #e8eef8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.service-card:hover .service-img img { transform: scale(1.06); }
+.service-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.service-body h5 { margin-bottom: 10px; }
+.service-body h5 a { color: #333; }
+.service-body h5 a:hover { color: var(--primary); }
+.service-body p { font-size: 14px; color: #666; flex: 1; }
+
+/* ── WHY CHOOSE US ── */
+.why-card {
+  background: #fff;
+  transition: all 0.3s;
+  height: 100%;
+}
+.why-card:hover {
+  background: #f0f6ff;
+  border-color: var(--primary) !important;
+  transform: translateY(-3px);
+}
+.why-card h5 { margin-bottom: 8px; }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  background: linear-gradient(135deg, #0d2d6e 0%, var(--primary) 100%);
+  padding: 20px 0;
+}
+.page-header h3 { font-size: 36px; font-weight: 700; margin-bottom: 10px; }
+.page-header p, .page-header a { font-size: 14px; }
+
+/* ── PRODUCT PAGE SIDEBAR ── */
+.sidebar-widget { background: #fff; }
+.sidebar-link {
+  display: block;
+  color: #555;
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #eee;
+  transition: all 0.2s;
+}
+.sidebar-link:hover, .sidebar-link.active {
+  color: var(--primary);
+  padding-left: 8px;
+}
+.list-styled { padding-left: 20px; }
+.list-styled li { margin-bottom: 8px; color: #555; }
+
+/* ── CONTACT ── */
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  font-size: 14px;
+  color: #444;
+  transition: border-color 0.3s;
+}
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(29,94,189,0.15);
+}
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  background: linear-gradient(135deg, #0d2d6e 0%, var(--primary) 100%);
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--dark) !important;
+  color: #aaa;
+}
+.footer h4 { font-size: 18px; }
+.footer p { color: #aaa; font-size: 14px; }
+.btn-outline-light.btn-square {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 14px;
+}
+.btn-outline-light.btn-square:hover { background: var(--primary); border-color: var(--primary); }
+
+/* ── BACK TO TOP ── */
+.back-to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 40px; height: 40px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+}
+.back-to-top.show { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { background: #0d3d80; color: #fff; }
+
+/* ── ALERT ── */
+.alert { border-radius: 6px; font-size: 14px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 991px) {
+  .carousel-bg { height: 420px; }
+  .carousel-caption h1 { font-size: 32px; }
+  .navbar-nav .nav-link { padding: 10px 15px; }
+}
+@media (max-width: 576px) {
+  .carousel-bg { height: 320px; }
+  .carousel-caption h1 { font-size: 24px; }
+  .carousel-caption .btn { padding: 10px 20px; font-size: 13px; }
+}
